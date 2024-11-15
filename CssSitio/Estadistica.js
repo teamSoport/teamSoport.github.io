@@ -1,0 +1,192 @@
+ $(document).ready(function () {
+            //Sample Json data
+            var jsondata = [
+                        {
+                          "year":"2024",
+                          "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero24.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                          "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero24.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                          "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo24.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                          "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril24.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                          "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo24.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                          "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio24.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',                           
+                          "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio24.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>', 
+                          "ago":`<a href="../ArchivosPdf/Estadistica/GAgosto24.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                          "sep":`<a href="../ArchivosPdf/Estadistica/GSeptiembre24.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                          /*"oct":`<a href="../ArchivosPdf/Estadistica/GOctubre24.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                          "nov":`<a href="../ArchivosPdf/Estadistica/GNoviembre24.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                          "dic":`<a href="../ArchivosPdf/Estadistica/GDiciembre24.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`  */
+                      }, 
+                        {
+                          "year":"2023",
+                          "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero23.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero23.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                          "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo23.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                          "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril23.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                          "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo23.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                          "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio23.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',                           
+                          "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio23.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>', 
+                          "ago":`<a href="../ArchivosPdf/Estadistica/GAgosto23.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                         "sep":`<a href="../ArchivosPdf/Estadistica/GSeptiembre23.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                          "oct":`<a href="../ArchivosPdf/Estadistica/GOctubre23.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                         "nov":`<a href="../ArchivosPdf/Estadistica/GNoviembre23.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                           "dic":`<a href="../ArchivosPdf/Estadistica/GDiciembre23.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>` 
+                      }, 
+                        {
+                          "year":"2022",
+                           "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero22.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero22.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo22.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril22.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo22.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio22.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',                          
+                           "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio22.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>', 
+                           "ago":`<a href="../ArchivosPdf/Estadistica/GAgosto22.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                           "sep":`<a href="../ArchivosPdf/Estadistica/GSeptiembre22.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                           "oct":`<a href="../ArchivosPdf/Estadistica/GOctubre22.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                           "nov":`<a href="../ArchivosPdf/Estadistica/GNoviembre22.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`,
+                           "dic":`<a href="../ArchivosPdf/Estadistica/GDiciembre22.pdf" target="_blank"><img src="../img/iconos/pdf.png" alt=""></a>`
+                       }, 
+                       {
+                          "year":"2021",
+                           "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "ago":"<a href="+"../ArchivosPdf/Estadistica/GAgosto21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "sep":"<a href="+"../ArchivosPdf/Estadistica/GSeptiembre21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "oct":"<a href="+"../ArchivosPdf/Estadistica/GOctubre21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "nov":"<a href="+"../ArchivosPdf/Estadistica/GNoviembre21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                            "dic":"<a href="+"../ArchivosPdf/Estadistica/GDiciembre21.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>'
+                       }, 
+                         {
+                          "year":"2020",
+                           "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "ago":"<a href="+"../ArchivosPdf/Estadistica/GAgosto20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "sep":"<a href="+"../ArchivosPdf/Estadistica/GSeptiembre20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "oct":"<a href="+"../ArchivosPdf/Estadistica/GOctubre20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "nov":"<a href="+"../ArchivosPdf/Estadistica/GNoviembre20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "dic":"<a href="+"../ArchivosPdf/Estadistica/GDiciembre20.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>'
+                       }, 
+               
+                        {
+                          "year":"2019",
+                           "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "ago":"<a href="+"../ArchivosPdf/Estadistica/GAgosto19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "sep":"<a href="+"../ArchivosPdf/Estadistica/GSeptiembre19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "oct":"<a href="+"../ArchivosPdf/Estadistica/GOctubre19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "nov":"<a href="+"../ArchivosPdf/Estadistica/GNoviembre19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "dic":"<a href="+"../ArchivosPdf/Estadistica/GDiciembre19.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>'
+                       }, 
+                         {
+                          "year":"2018",
+                            "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "ago":"<a href="+"../ArchivosPdf/Estadistica/GAgosto18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "sep":"<a href="+"../ArchivosPdf/Estadistica/GSeptiembre18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "oct":"<a href="+"../ArchivosPdf/Estadistica/GOctubre18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "nov":"<a href="+"../ArchivosPdf/Estadistica/GNoviembre18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "dic":"<a href="+"../ArchivosPdf/Estadistica/GDiciembre18.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>'
+                       },
+                         {
+                          "year":"2017",
+                            "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "ago":"<a href="+"../ArchivosPdf/Estadistica/GAgosto17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "sep":"<a href="+"../ArchivosPdf/Estadistica/GSeptiembre17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "oct":"<a href="+"../ArchivosPdf/Estadistica/GOctubre17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "nov":"<a href="+"../ArchivosPdf/Estadistica/GNoviembre17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "dic":"<a href="+"../ArchivosPdf/Estadistica/GDiciembre17.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>'
+                         },
+                         {
+                          "year":"2016",
+                            "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "ago":"<a href="+"../ArchivosPdf/Estadistica/GAgosto16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "sep":"<a href="+"../ArchivosPdf/Estadistica/GSeptiembre16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "oct":"<a href="+"../ArchivosPdf/Estadistica/GOctubre16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "nov":"<a href="+"../ArchivosPdf/Estadistica/GNoviembre16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "dic":"<a href="+"../ArchivosPdf/Estadistica/GDiciembre16.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>'
+                       }, 
+                         {
+                          "year":"2015",
+                            "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "ago":"<a href="+"../ArchivosPdf/Estadistica/GAgosto15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "sep":"<a href="+"../ArchivosPdf/Estadistica/GSeptiembre15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "oct":"<a href="+"../ArchivosPdf/Estadistica/GOctubre15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "nov":"<a href="+"../ArchivosPdf/Estadistica/GNoviembre15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "dic":"<a href="+"../ArchivosPdf/Estadistica/GDiciembre15.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>'
+                       }, 
+                         {
+                          "year":"2014",
+                          "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "ago":"<a href="+"../ArchivosPdf/Estadistica/GAgosto14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "sep":"<a href="+"../ArchivosPdf/Estadistica/GSeptiembre14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "oct":"<a href="+"../ArchivosPdf/Estadistica/GOctubre14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "nov":"<a href="+"../ArchivosPdf/Estadistica/GNoviembre14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "dic":"<a href="+"../ArchivosPdf/Estadistica/GDiciembre14.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>'
+                       }, 
+                         {
+                          "year":"2013",
+                          "ene":"<a href="+"../ArchivosPdf/Estadistica/GEnero13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "feb":"<a href="+"../ArchivosPdf/Estadistica/GFebrero13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "mar":"<a href="+"../ArchivosPdf/Estadistica/GMarzo13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "abr":"<a href="+"../ArchivosPdf/Estadistica/GAbril13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "may":"<a href="+"../ArchivosPdf/Estadistica/GMayo13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jun":"<a href="+"../ArchivosPdf/Estadistica/GJunio13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "jul":"<a href="+"../ArchivosPdf/Estadistica/GJulio13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "ago":"<a href="+"../ArchivosPdf/Estadistica/GAgosto13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "sep":"<a href="+"../ArchivosPdf/Estadistica/GSeptiembre13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "oct":"<a href="+"../ArchivosPdf/Estadistica/GOctubre13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "nov":"<a href="+"../ArchivosPdf/Estadistica/GNoviembre13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>',
+                           "dic":"<a href="+"../ArchivosPdf/Estadistica/GDiciembre13.pdf"+" target="+"'_blank'"+"><img src="+'" ../img/iconos/pdf.png"' +'alt=""></a>'
+                          }  
+
+                       ];
+ 
+            $('#tableEst').bootstrapTable({
+                //Assigning data to table
+                data: jsondata
+            });
+        }).on('shown.bs.tab');
